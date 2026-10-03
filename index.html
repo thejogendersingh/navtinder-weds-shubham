@@ -13,8 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#fffaf6">
-  <meta name="description" content="The wedding celebration of Shubham and Navtinder — November 2026.">
-  <title>Shubham weds Navtinder — Wedding Invitation</title>
+  <meta name="description" content="The wedding celebration of Shubham and Navtinder Kaur — 13 November 2026.">
+  <title>Shubham weds Navtinder Kaur — Wedding Invitation</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,600&family=Jost:wght@400;500;600&family=Marcellus&family=Great+Vibes&family=Tangerine:wght@400;700&family=Pinyon+Script&display=swap');
 
@@ -241,33 +241,64 @@
       cursor: pointer;
     }
     .hashtag-enter strong {
-      display: block;
-      padding: 17px 28px;
-      border: 1px solid rgba(255,255,255,.42);
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 17px 32px;
+      border: 1.5px solid rgba(255, 222, 170, 0.75);
       border-radius: 999px;
-      background: rgba(255,255,255,.1);
-      box-shadow: 0 12px 60px rgba(0,0,0,.18);
-      backdrop-filter: blur(12px);
+      background: linear-gradient(135deg, #8a1325 0%, #b81d36 50%, #d82b46 100%);
+      box-shadow: 
+        0 14px 45px rgba(138, 19, 37, 0.55),
+        0 0 25px rgba(216, 43, 70, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4);
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(19px, 3vw, 25px);
-      font-weight: 500;
-      letter-spacing: .035em;
+      font-size: clamp(20px, 3.2vw, 26px);
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: #fffaf0;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      animation: buttonPulse 2.2s ease-in-out infinite alternate;
       transition: transform .3s ease, background .3s ease, box-shadow .3s ease;
+    }
+    .hashtag-enter strong::after {
+      content: "👆";
+      font-size: 20px;
+      display: inline-block;
+      animation: handBounce 1.4s ease-in-out infinite alternate;
+    }
+    @keyframes buttonPulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 12px 35px rgba(138, 19, 37, 0.45), 0 0 18px rgba(216, 43, 70, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+      }
+      100% {
+        transform: scale(1.045);
+        box-shadow: 0 18px 55px rgba(138, 19, 37, 0.7), 0 0 35px rgba(255, 140, 160, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+        border-color: rgba(255, 240, 200, 1);
+      }
+    }
+    @keyframes handBounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-5px); }
     }
     .hashtag-enter span {
       display: block;
-      margin-top: 12px;
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: .24em;
+      margin-top: 13px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .25em;
       text-transform: uppercase;
-      opacity: .72;
+      color: #ffdcb5;
+      text-shadow: 0 1px 4px rgba(0,0,0,.7);
     }
     .hashtag-enter:hover strong,
     .hashtag-enter:focus-visible strong {
-      transform: translateY(-4px) scale(1.02);
-      background: rgba(255,255,255,.18);
-      box-shadow: 0 18px 70px rgba(0,0,0,.28), 0 0 0 6px rgba(255,255,255,.06);
+      transform: translateY(-4px) scale(1.06);
+      background: linear-gradient(135deg, #a0172e 0%, #c9223e 50%, #e8334f 100%);
+      box-shadow: 0 20px 65px rgba(160, 23, 46, 0.75), 0 0 30px rgba(255, 180, 195, 0.6);
     }
 
     .site-nav {
@@ -593,12 +624,14 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      font-size: 9px;
-      font-weight: 600;
+      font-size: 10.5px;
+      font-weight: 800;
       letter-spacing: .28em;
       text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0,0,0,.85), 0 0 20px rgba(0,0,0,.6);
     }
-    .film-label::before { content: ""; width: 45px; height: 1px; background: rgba(255,255,255,.65); }
+    .film-label::before { content: ""; width: 45px; height: 2px; background: #ffffff; box-shadow: 0 0 8px rgba(255,255,255,.8); }
     .film-copy {
       position: absolute;
       z-index: 3;
@@ -1555,9 +1588,10 @@
       bottom: max(24px, env(safe-area-inset-bottom));
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 9px;
-      min-height: 50px;
-      padding: 12px 18px;
+      min-height: 48px;
+      padding: 12px 20px;
       border: 1px solid rgba(255,255,255,.62);
       border-radius: 999px;
       color: white;
@@ -1566,7 +1600,7 @@
       cursor: pointer;
       opacity: 0;
       pointer-events: none;
-      transform: translateY(22px) scale(.92);
+      transform: translateY(16px);
       transition: transform .45s cubic-bezier(.22,.75,.22,1), opacity .35s ease, box-shadow .25s ease;
     }
     body.has-entered .firework-button {
@@ -1581,7 +1615,7 @@
       outline: none;
     }
     .firework-button:active { transform: scale(.96); }
-    .firework-button svg { width: 20px; height: 20px; }
+    .firework-button svg { width: 19px; height: 19px; }
     .firework-button span {
       font-size: 10px;
       font-weight: 600;
@@ -1657,17 +1691,17 @@
       /* leave room under the card for the fixed Music / Fireworks buttons */
       .event-card { height: min(760px, calc(100svh - 178px)); }
       .firework-button {
-        right: 13px;
-        bottom: max(13px, env(safe-area-inset-bottom));
-        min-height: 46px;
-        padding: 11px 15px;
+        right: 14px;
+        bottom: max(14px, env(safe-area-inset-bottom));
+        min-height: 44px;
+        padding: 10px 16px;
       }
       .firework-button span { font-size: 9px; }
       .music-button {
-        left: 13px;
-        bottom: max(13px, env(safe-area-inset-bottom));
-        min-height: 46px;
-        padding: 11px 14px;
+        left: 14px;
+        bottom: max(14px, env(safe-area-inset-bottom));
+        min-height: 44px;
+        padding: 10px 16px;
       }
       .music-button span { font-size: 9px; }
       .family-grid { grid-template-columns: 1fr; }
@@ -1825,6 +1859,24 @@
     .event-where { display: flex; align-items: flex-start; gap: 8px; }
     .event-where svg { flex: 0 0 auto; width: 15px; margin-top: 3px; opacity: .85; }
     .event-where-text { display: flex; flex-direction: column; gap: 2px; }
+    .event-map-link {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 4px 6px;
+      margin: -4px -6px;
+      transition: background .2s ease, transform .2s ease;
+    }
+    .event-map-link:hover,
+    .event-map-link:focus-visible {
+      background: rgba(255,255,255,.09);
+      transform: translateX(3px);
+    }
+    .event-map-link:hover .event-where-text span {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
     /* Final card in the image-6 script style */
     .venue-card .closing-message {
@@ -1887,9 +1939,10 @@
       bottom: max(24px, env(safe-area-inset-bottom));
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 9px;
-      min-height: 50px;
-      padding: 12px 18px;
+      min-height: 48px;
+      padding: 12px 20px;
       border: 1px solid rgba(255,255,255,.34);
       border-radius: 999px;
       color: #ffe7d2;
@@ -2007,7 +2060,7 @@
     <div class="gate-content">
       <p class="gate-kicker" id="gateKicker">Some journeys begin with a glance.<br>Ours begins with a promise.</p>
       <div class="gate-seal" aria-hidden="true"><span id="gateInitials">S · N</span></div>
-      <h1 class="gate-title" id="gateTitle">Shubham <em>weds</em> Navtinder</h1>
+      <h1 class="gate-title" id="gateTitle">Shubham <em>weds</em> Navtinder Kaur</h1>
       <p class="gate-forever" id="gateForever">Invite you to witness the beginning of their forever.</p>
       <button class="hashtag-enter" id="enterButton" type="button">
         <strong id="gateHashtag">#ShubhamWedsNavtinder</strong>
@@ -2035,7 +2088,7 @@
   <nav class="site-nav" aria-label="Wedding navigation">
     <a class="nav-mark" href="#home">
       <span class="nav-monogram" id="navInitials">SN</span>
-      <b id="navNames">Shubham weds Navtinder</b>
+      <b id="navNames">Shubham weds Navtinder Kaur</b>
     </a>
     <div class="nav-links">
       <a href="#film">Our Film</a>
@@ -2054,7 +2107,7 @@
         <div class="film-copy">
           <div class="film-caption" data-start="0.60" data-end="0.78">
             <p class="film-lines" id="filmLines">With the blessings of grandparents<br>Smt. Sita Devi &amp; Late Sh. Diwan Chand</p>
-            <h2 class="film-names" id="filmNames"><span>Shubham</span><em>weds</em><span>Navtinder</span></h2>
+            <h2 class="film-names" id="filmNames"><span>Shubham</span><em>weds</em><span>Navtinder Kaur</span></h2>
             <p class="film-forever" id="filmForever">Request the pleasure of your gracious presence on the auspicious occasion of the wedding</p>
           </div>
           <div class="film-caption film-welcome" data-start="0.79" data-end="0.99">
@@ -2063,7 +2116,7 @@
             <p class="fw-rel" id="filmGroomRelation">S/O</p>
             <p class="fw-parents" id="filmGroomParents">Mrs. Punita Rani &amp; Mr. Umesh Kumar</p>
             <p class="fw-with">with</p>
-            <h2 class="fw-name" id="filmBrideName">Navtinder</h2>
+            <h2 class="fw-name" id="filmBrideName">Navtinder Kaur</h2>
             <p class="fw-rel" id="filmBrideRelation">D/O</p>
             <p class="fw-parents" id="filmBrideParents">Sdn. Kamlesh Kaur &amp; S. Gurbhag Singh</p>
           </div>
@@ -2141,42 +2194,42 @@
           <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;" id="rsvp">
             <div class="whatsapp-card on-dark" style="margin: 0;">
               <div><small>R.S.V.P &middot; Umesh Kumar</small><b>9569853596</b></div>
-              <a href="https://wa.me/919569853596?text=Hello%20Umesh%20ji%2C%20RSVPing%20for%20Shubham%20and%20Navtinder%27s%20wedding!" target="_blank" rel="noopener" aria-label="WhatsApp Umesh Kumar">
+              <a href="https://wa.me/919569853596?text=Hello%20Umesh%20ji%2C%20RSVPing%20for%20Shubham%20and%20Navtinder%20Kaur%27s%20wedding!" target="_blank" rel="noopener" aria-label="WhatsApp Umesh Kumar">
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.4-4.2a8.5 8.5 0 1 1 15.6-4.6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.2 7.7c.3-.5.6-.5.9-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.5.9 1.2 1.7 2.1 2.2.3.2.5.2.7 0l.8-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.5.3.5.5 0 .3-.1 1.2-.7 1.7-.5.5-1.3.8-2.2.6-1-.2-2.8-.9-4.6-2.5-2.3-2-3-4.3-3.1-5.1 0-.4.1-.6.2-.8Z" fill="currentColor"/></svg>
               </a>
             </div>
 
             <div class="whatsapp-card on-dark" style="margin: 0;">
               <div><small>R.S.V.P &middot; Surinder Bugreja</small><b>9988561155</b></div>
-              <a href="https://wa.me/919988561155?text=Hello%20Surinder%20ji%2C%20RSVPing%20for%20Shubham%20and%20Navtinder%27s%20wedding!" target="_blank" rel="noopener" aria-label="WhatsApp Surinder Bugreja">
+              <a href="https://wa.me/919988561155?text=Hello%20Surinder%20ji%2C%20RSVPing%20for%20Shubham%20and%20Navtinder%20Kaur%27s%20wedding!" target="_blank" rel="noopener" aria-label="WhatsApp Surinder Bugreja">
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.4-4.2a8.5 8.5 0 1 1 15.6-4.6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.2 7.7c.3-.5.6-.5.9-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.5.9 1.2 1.7 2.1 2.2.3.2.5.2.7 0l.8-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.5.3.5.5 0 .3-.1 1.2-.7 1.7-.5.5-1.3.8-2.2.6-1-.2-2.8-.9-4.6-2.5-2.3-2-3-4.3-3.1-5.1 0-.4.1-.6.2-.8Z" fill="currentColor"/></svg>
               </a>
             </div>
 
             <div class="whatsapp-card on-dark" style="margin: 0;">
               <div><small>R.S.V.P &middot; Dixit Sethi</small><b>9888777293</b></div>
-              <a href="https://wa.me/919888777293?text=Hello%20Dixit%20ji%2C%20RSVPing%20for%20Shubham%20and%20Navtinder%27s%20wedding!" target="_blank" rel="noopener" aria-label="WhatsApp Dixit Sethi">
+              <a href="https://wa.me/919888777293?text=Hello%20Dixit%20ji%2C%20RSVPing%20for%20Shubham%20and%20Navtinder%20Kaur%27s%20wedding!" target="_blank" rel="noopener" aria-label="WhatsApp Dixit Sethi">
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.4-4.2a8.5 8.5 0 1 1 15.6-4.6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.2 7.7c.3-.5.6-.5.9-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.5.9 1.2 1.7 2.1 2.2.3.2.5.2.7 0l.8-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.5.3.5.5 0 .3-.1 1.2-.7 1.7-.5.5-1.3.8-2.2.6-1-.2-2.8-.9-4.6-2.5-2.3-2-3-4.3-3.1-5.1 0-.4.1-.6.2-.8Z" fill="currentColor"/></svg>
               </a>
             </div>
 
             <div class="whatsapp-card on-dark" style="margin: 0;">
               <div><small>R.S.V.P &middot; Karan</small><b>6284668552</b></div>
-              <a href="https://wa.me/916284668552?text=Hello%20Karan%20ji%2C%20RSVPing%20for%20Shubham%20and%20Navtinder%27s%20wedding!" target="_blank" rel="noopener" aria-label="WhatsApp Karan">
+              <a href="https://wa.me/916284668552?text=Hello%20Karan%20ji%2C%20RSVPing%20for%20Shubham%20and%20Navtinder%20Kaur%27s%20wedding!" target="_blank" rel="noopener" aria-label="WhatsApp Karan">
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.4-4.2a8.5 8.5 0 1 1 15.6-4.6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.2 7.7c.3-.5.6-.5.9-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.5.9 1.2 1.7 2.1 2.2.3.2.5.2.7 0l.8-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.5.3.5.5 0 .3-.1 1.2-.7 1.7-.5.5-1.3.8-2.2.6-1-.2-2.8-.9-4.6-2.5-2.3-2-3-4.3-3.1-5.1 0-.4.1-.6.2-.8Z" fill="currentColor"/></svg>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer-line"><span id="footerNamesDate">Shubham weds Navtinder · November 2026</span><span>Made with love for one beautiful beginning</span></div>
+      <div class="footer-line"><span id="footerNamesDate">Shubham weds Navtinder Kaur · 13 November 2026</span><span>Made with love for one beautiful beginning</span></div>
     </section>
   </main>
 
   <script>
     const CONFIG = {
       groomName: "Shubham",
-      brideName: "Navtinder",
+      brideName: "Navtinder Kaur",
       heroMessage: "Invite you to a celebration of colour, laughter and a lifetime of togetherness.",
       hashtag: "#ShubhamWedsNavtinder",
       countdownIso: "2026-11-13T18:00:00+05:30",
@@ -2207,8 +2260,8 @@
       venueSchedule: "Celebrations · 11–13 November 2026",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Palki%20Palace%20Chandigarh-Kharar%20Road%2C%20Balongi%2C%20Mohali",
       rsvpNumber: "+91 9569853596",
-      locationWhatsappMessage: "Hello, I would like the location for Shubham and Navtinder's wedding celebration.",
-      rsvpWhatsappMessage: "Hello, I am RSVPing for Shubham and Navtinder's wedding celebration.",
+      locationWhatsappMessage: "Hello, I would like the location for Shubham and Navtinder Kaur's wedding celebration.",
+      rsvpWhatsappMessage: "Hello, I am RSVPing for Shubham and Navtinder Kaur's wedding celebration.",
 
       /* ---- EXACT FUNCTIONS FROM WEDDING INVITATION CARD ---- */
       functions: [
@@ -2381,7 +2434,7 @@
       setText("venueSchedule", CONFIG.venueSchedule);
       setText("rsvpNumber", CONFIG.rsvpNumber);
       setText("finalHashtag", CONFIG.hashtag);
-      setText("footerNamesDate", names + " · " + date.month + " " + date.year);
+      setText("footerNamesDate", names + " · 13 " + date.month + " " + date.year);
 
       const countdown = document.getElementById("countdown");
       if (countdown) countdown.setAttribute("aria-label", "Countdown to " + date.day + " " + date.month + " " + date.year);
@@ -2416,6 +2469,8 @@
           const pin = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
             '<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.7"/>' +
             '<circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>';
+          const mapQuery = encodeURIComponent((event.venueArea || "") + " " + (event.venueName || ""));
+          const mapUrl = "https://www.google.com/maps/search/?api=1&query=" + mapQuery;
           return '<article class="event-card" data-image="' + inviteEscape(image) + '" style="--slide-bg:' + theme.background + ';--accent:' + theme.accent + ';--i:' + index + ';z-index:' + (index + 1) + '">' +
             '<span class="event-badge">Function ' + String(index + 1).padStart(2, "0") + '</span>' +
             '<div class="event-media">' +
@@ -2427,9 +2482,9 @@
             '<b>On ' + inviteEscape(event.day) + ' | ' + inviteEscape(event.date) + '</b>' +
             '<b>' + inviteEscape(event.time) + '</b></div>' +
             '<div class="event-divider" aria-hidden="true"><i></i><span>&#10086;</span><i></i></div>' +
-            '<div class="event-place event-where">' + pin + '<span class="event-where-text">' +
+            '<a class="event-place event-where event-map-link" href="' + mapUrl + '" target="_blank" rel="noopener" title="Open location in Google Maps">' + pin + '<span class="event-where-text">' +
             '<b>' + inviteEscape(event.venueArea) + '</b>' +
-            '<span>' + inviteEscape(event.venueName) + '</span></span></div>' +
+            '<span>' + inviteEscape(event.venueName) + '</span></span></a>' +
             '</div></article>';
         }).join("");
       }
