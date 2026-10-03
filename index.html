@@ -2117,7 +2117,7 @@
   <main>
     <section class="film-scroll" id="film" aria-label="Scroll-controlled wedding film">
       <div class="film-sticky">
-        <video id="scrollVideo" poster="assets/hero-poster.jpg" src="assets/hero-optimized.mp4" preload="auto" muted playsinline webkit-playsinline disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"></video>
+        <video id="scrollVideo" poster="assets/hero-poster.jpg" preload="auto" muted playsinline webkit-playsinline disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"></video>
         <canvas id="filmCanvas" aria-label="Wedding film"></canvas>
         <div class="film-label">Scroll-controlled wedding film</div>
         <div class="film-copy">
@@ -2993,6 +2993,9 @@
       let primed = false;
       let priming = false;
       function primeFilm() {
+        /* phones scrub image frames, not the video - playing it there painted
+           the whole film over the canvas */
+        if (useFrames) return;
         if (primed) return;
         primed = true;
         priming = true;
@@ -3055,8 +3058,13 @@
          the scroll loop must not paint as well - doing both drew each frame
          twice and stole time from seeking. */
       const hasRvfc = 'requestVideoFrameCallback' in HTMLVideoElement.prototype;
-      if (hasRvfc) {
-        const onFrame = () => { paintFrame(true); video.requestVideoFrameCallback(onFrame); };
+      if (hasRvfc && !useFrames) {
+        /* skip frames presented while the priming play() is running, or the
+           film visibly plays on its own for a moment */
+        const onFrame = () => {
+          if (!priming && video.paused) paintFrame(true);
+          video.requestVideoFrameCallback(onFrame);
+        };
         video.requestVideoFrameCallback(onFrame);
       }
       /* Only measured on resize now. It used to run inside the scroll loop,
@@ -3094,7 +3102,7 @@
         filmRaf = 0;
         readScroll();
         paintOverlays();
-        if (!hasRvfc) paintFrame(false);
+        if (!hasRvfc && !useFrames && !priming) paintFrame(false);
 
         if (useFrames) {
           paintSequenceFrame(false);
