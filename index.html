@@ -2515,6 +2515,8 @@
       const body = document.body;
       const gate = document.getElementById('enterGate');
       const enterButton = document.getElementById('enterButton');
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      window.scrollTo(0, 0);
 
       enterButton.addEventListener('click', () => {
         gate.classList.add('is-open');
@@ -2522,6 +2524,12 @@
         body.classList.add('has-entered');
         if (typeof window.__primeFilm === 'function') window.__primeFilm();
         if (typeof window.__startMusic === 'function') window.__startMusic();
+        /* the page was locked behind the gate, so repaint the film once the
+           gate opens instead of waiting for the first scroll */
+        if (typeof window.__refreshFilm === 'function') {
+          window.__refreshFilm();
+          setTimeout(window.__refreshFilm, 120);
+        }
         setTimeout(() => gate.setAttribute('aria-hidden', 'true'), 900);
       });
 
@@ -2952,7 +2960,9 @@
 
       video.addEventListener('loadedmetadata', () => {
         if (Number.isFinite(video.duration) && video.duration > 0) duration = video.duration;
-        try { video.currentTime = 0.02; } catch (e) {}
+        /* resume where the scroll is - the blob swap reloads the element and
+           used to snap the film back to frame 0 */
+        try { video.currentTime = Math.min(duration - 0.05, Math.max(0.02, smoothTime)); } catch (e) {}
         filmReady();
       });
       video.addEventListener('loadeddata', filmReady);
@@ -2990,7 +3000,10 @@
           priming = false;
           try { video.pause(); video.currentTime = Math.max(0.02, smoothTime); } catch (e) {}
         };
-        try { video.load(); } catch (e) {}
+        /* Only reload if nothing has loaded yet. Calling load() on an already
+           ready video threw away the decoded film on every Enter click, so it
+           randomly showed the poster image instead of the film. */
+        if (video.readyState === 0) { try { video.load(); } catch (e) {} }
         const attempt = video.play();
         if (attempt && typeof attempt.then === 'function') {
           attempt.then(done).catch(() => { priming = false; primed = false; });
@@ -3144,6 +3157,15 @@
       smoothTime = targetTime;
       paintOverlays();
       requestFilmUpdate();
+
+      window.__refreshFilm = () => {
+        sizeFilmCanvas();
+        lastPaintedTime = -1;
+        lastFrameDrawn = -1;
+        if (useFrames) paintSequenceFrame(true); else paintFrame(true);
+        requestFilmUpdate();
+      };
+      addEventListener('pageshow', () => window.__refreshFilm());
 
       const countEls = {
         days: document.getElementById('days'),
