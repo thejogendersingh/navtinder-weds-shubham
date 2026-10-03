@@ -116,7 +116,7 @@
       inset: -6%;
       background:
         linear-gradient(180deg, rgba(32, 7, 12, .25), rgba(32, 7, 12, .82)),
-        url("assets/preloader.png") center 50% / cover no-repeat;
+        url("assets/preloader.webp") center 50% / cover no-repeat;
       filter: saturate(.95);
       transform: scale(1.08);
       animation: gateDrift 12s ease-in-out infinite alternate;
@@ -609,6 +609,11 @@
       opacity: 1;
       filter: saturate(1.04);
       background: #170e0f url("assets/hero-poster.jpg") center / cover no-repeat;
+      transition: background 0.4s ease;
+    }
+    body.film-ready .film-sticky canvas {
+      background-image: none;
+      background-color: #170e0f;
     }
     .film-sticky::after {
       content: "";
@@ -683,10 +688,12 @@
       margin: 0;
       opacity: 0;
       transform: translateY(calc(-50% + 34px));
-      transition: opacity .35s linear, transform .35s ease-out, filter .35s linear;
       padding: clamp(24px, 4vw, 44px) clamp(10px, 2.5vw, 28px);
       text-shadow: 0 2px 10px rgba(0,0,0,.6), 0 12px 46px rgba(0,0,0,.5);
       pointer-events: none;
+      will-change: opacity, transform, filter;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
     .film-caption::before {
       content: "";
@@ -694,12 +701,12 @@
       z-index: -1;
       inset: -22% -16%;
       background: radial-gradient(ellipse at center,
-        rgba(10,4,6,.70) 0%,
-        rgba(10,4,6,.52) 32%,
-        rgba(10,4,6,.26) 55%,
-        rgba(10,4,6,.08) 72%,
-        transparent 85%);
-      filter: blur(34px);
+        rgba(10,4,6,.75) 0%,
+        rgba(10,4,6,.58) 35%,
+        rgba(10,4,6,.28) 58%,
+        rgba(10,4,6,.08) 75%,
+        transparent 88%);
+      filter: blur(28px);
       pointer-events: none;
     }
     .film-caption.is-active { opacity: 1; transform: translateY(-50%); }
@@ -1086,7 +1093,7 @@
     .event-media {
       position: relative;
       flex: 1 1 auto;
-      min-height: 90px;
+      min-height: 200px;
       overflow: hidden;
       border-radius: 26px 26px 0 0;
       background: var(--slide-bg, #fff8ef);
@@ -1097,16 +1104,17 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 38%;
-      transform: scale(1.03);
+      object-position: center 25%;
+      transform: scale(1.02);
       transition: transform 5s ease;
     }
-    .event-card:hover .event-media img { transform: scale(1.09); }
+    .event-card:hover .event-media img { transform: scale(1.06); }
     .event-media::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 62%, var(--slide-bg, #fff8ef));
+      background: linear-gradient(180deg, transparent 72%, var(--slide-bg, #fff8ef) 100%);
+      pointer-events: none;
     }
     .event-copy {
       position: relative;
@@ -1646,14 +1654,11 @@
       .events-heading { display: block; margin-bottom: 34px; }
       .slide-hint { margin-top: 28px; }
       .events { padding: 76px 0 90px; }
-      .event-card { top: 84px; border-width: 7px; border-radius: 26px; }
+      .event-card { top: 84px; border-width: 7px; border-radius: 26px; height: min(760px, calc(100svh - 178px)); }
       .event-card + .event-card { margin-top: 40svh; }
-      .event-card { height: calc(100svh - 104px); }
-      .event-media { border-radius: 19px 19px 0 0; }
+      .event-media { border-radius: 19px 19px 0 0; min-height: 180px; }
       .event-copy { padding: 4px 18px 20px; }
       .event-stack { width: calc(100% - 24px); }
-      /* leave room under the card for the fixed Music / Fireworks buttons */
-      .event-card { height: min(760px, calc(100svh - 178px)); }
       .firework-button,
       .music-button {
         bottom: max(14px, env(safe-area-inset-bottom));
@@ -1861,8 +1866,23 @@
       font-weight: 400;
     }
 
-    /* Ganesh Pooja frame was cropping the faces on narrow screens */
-    .event-card[data-image$="ganesh-pooja.webp"] .event-media img { object-position: 50% 22%; }
+    /* Function card image focal points — ensures main subject/faces are fully visible */
+    .event-card[data-image*="mehandi."] .event-media img { object-position: center 20%; }
+    .event-card[data-image*="haldi."] .event-media img { object-position: center 20%; }
+    .event-card[data-image*="sangeet."] .event-media img { object-position: center 22%; }
+    .event-card[data-image*="sehra-bandi."] .event-media img { object-position: center 18%; }
+    .event-card[data-image*="baraat."] .event-media img { object-position: center 22%; }
+    .event-card[data-image$="ganesh-pooja.webp"] .event-media img { object-position: center 20%; }
+    .event-card[data-image$="mehendi.webp"] .event-media img { object-position: center 22%; }
+    .event-card[data-image$="haldi.webp"] .event-media img { object-position: center 24%; }
+    .event-card[data-image$="sangeet.webp"] .event-media img { object-position: center 25%; }
+    .event-card[data-image$="baraat.webp"] .event-media img { object-position: center 28%; }
+    .event-card[data-image$="wedding.webp"] .event-media img { object-position: center 20%; }
+    .event-card[data-image$="engagement.webp"] .event-media img { object-position: center 22%; }
+    .event-card[data-image$="mayra.webp"] .event-media img { object-position: center 25%; }
+    .event-card[data-image$="carnival.webp"] .event-media img { object-position: center 25%; }
+    .event-card[data-image$="pool-party.webp"] .event-media img { object-position: center 25%; }
+    .event-card[data-image$="reception.webp"] .event-media img { object-position: center 22%; }
     .scratch-reveal small { color: #ffc2d1; }
     .scratch-reset {
       color: #2a1512;
@@ -2101,12 +2121,12 @@
         <canvas id="filmCanvas" aria-label="Wedding film"></canvas>
         <div class="film-label">Scroll-controlled wedding film</div>
         <div class="film-copy">
-          <div class="film-caption" data-start="0.60" data-end="0.78">
+          <div class="film-caption" data-start="0.52" data-end="0.76">
             <p class="film-lines" id="filmLines">With the blessings of grandparents<br>Smt. Sita Devi &amp; Late Sh. Diwan Chand</p>
             <h2 class="film-names" id="filmNames"><span>Shubham</span><em>weds</em><span>Navtinder Kaur</span></h2>
             <p class="film-forever" id="filmForever">Request the pleasure of your gracious presence on the auspicious occasion of the wedding</p>
           </div>
-          <div class="film-caption film-welcome" data-start="0.79" data-end="0.99">
+          <div class="film-caption film-welcome" data-start="0.77" data-end="1.00">
             <p class="fw-lead" id="filmWelcomeLead">Request the pleasure of your gracious presence on the wedding of their beloved son</p>
             <h2 class="fw-name" id="filmGroomName">Shubham</h2>
             <p class="fw-rel" id="filmGroomRelation">S/O</p>
@@ -2271,7 +2291,7 @@
           time: "04:00 PM",
           venueArea: "At Residence",
           venueName: "#110/A, Rajdhani Enclave, Sector-126, Kharar, Mohali (Pb.)",
-          image: "assets/images/mehendi.webp"
+          image: "assets/mehandi.webp"
         },
         {
           enabled: true,
@@ -2283,7 +2303,7 @@
           time: "09:00 AM",
           venueArea: "At Residence",
           venueName: "#110/A, Rajdhani Enclave, Sector-126, Kharar, Mohali (Pb.)",
-          image: "assets/images/haldi.webp"
+          image: "assets/haldi.webp"
         },
         {
           enabled: true,
@@ -2295,7 +2315,7 @@
           time: "07:00 PM",
           venueArea: "Hotel G.K. International",
           venueName: "Sector-35, Chandigarh",
-          image: "assets/images/sangeet.webp"
+          image: "assets/sangeet.webp"
         },
         {
           enabled: true,
@@ -2307,7 +2327,7 @@
           time: "04:00 PM",
           venueArea: "At Residence",
           venueName: "#110/A, Rajdhani Enclave, Sector-126, Kharar, Mohali (Pb.)",
-          image: "assets/images/ganesh-pooja.webp"
+          image: "assets/sehra-bandi.webp"
         },
         {
           enabled: true,
@@ -2319,7 +2339,7 @@
           time: "06:00 PM",
           venueArea: "From Residence to Palki Palace",
           venueName: "Chandigarh-Kharar Road, Balongi, Mohali (Pb.)",
-          image: "assets/images/baraat.webp"
+          image: "assets/baraat.webp"
         }
       ]
     };
@@ -2803,20 +2823,21 @@
         img.src = framePath(i);
       }
 
-      /* Coarse pass first so the whole film is scrubbable almost immediately,
-         then fill in the gaps. */
+      /* Load first frame immediately for instant visual rendering, then coarse pass, then fill */
       function loadFrameSequence() {
-        for (let i = 0; i < FRAME_COUNT; i += 8) loadFrame(i);
-        let next = 0;
+        loadFrame(0);
+        loadFrame(1);
+        for (let i = 8; i < FRAME_COUNT; i += 8) loadFrame(i);
+        let next = 2;
         const fill = () => {
           let started = 0;
-          while (next < FRAME_COUNT && started < 6) {
+          while (next < FRAME_COUNT && started < 8) {
             if (!frames[next]) { loadFrame(next); started++; }
             next++;
           }
-          if (next < FRAME_COUNT) setTimeout(fill, 120);
+          if (next < FRAME_COUNT) setTimeout(fill, 80);
         };
-        setTimeout(fill, 400);
+        setTimeout(fill, 200);
       }
 
       /* Nearest frame that has actually arrived, so early scrolling still
@@ -2876,35 +2897,28 @@
 
       function loadFilm(src) {
         currentSrc = src;
-        ready = false;
         clearTimeout(watchdog);
-        /* whatever route we take, never sit on a dead player: if nothing is
-           ready in time, re-attach the plain URL and let the browser stream */
-        watchdog = setTimeout(() => { if (!ready) attach(src); }, 9000);
+        /* Attach the direct video source immediately so browser starts streaming & decoding right away */
+        attach(src);
 
-        if (isWebKit || location.protocol === 'file:') {
-          attach(src);
-          return;
-        }
+        if (isWebKit || location.protocol === 'file:') return;
 
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', src, true);
-        xhr.responseType = 'blob';
-        xhr.onprogress = (event) => {
-          if (event.lengthComputable) showProgress(event.loaded / event.total);
-        };
-        xhr.onload = () => {
-          if (xhr.status >= 200 && xhr.status < 300 && xhr.response && xhr.response.size) {
-            if (blobUrl) URL.revokeObjectURL(blobUrl);
-            blobUrl = URL.createObjectURL(xhr.response);
-            attach(blobUrl);
-          } else {
-            attach(src);
-          }
-        };
-        xhr.onerror = () => attach(src);
-        xhr.onabort = () => attach(src);
-        try { xhr.send(); } catch (e) { attach(src); }
+        /* In background on Chromium/Gecko, cache blob to make scrubbing 100% memory-instant */
+        try {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', src, true);
+          xhr.responseType = 'blob';
+          xhr.onload = () => {
+            if (xhr.status >= 200 && xhr.status < 300 && xhr.response && xhr.response.size) {
+              if (blobUrl) URL.revokeObjectURL(blobUrl);
+              blobUrl = URL.createObjectURL(xhr.response);
+              const curTime = video.currentTime;
+              attach(blobUrl);
+              try { video.currentTime = curTime; } catch (e) {}
+            }
+          };
+          xhr.send();
+        } catch (e) {}
       }
 
       function showProgress(fraction) {
@@ -3053,12 +3067,13 @@
           const to = parseFloat(caption.dataset.end || '1');
           const mid = (from + to) / 2;
           const half = Math.max(0.001, (to - from) / 2);
-          const visibility = Math.max(0, Math.min(1, 1.55 * (1 - Math.abs(amount - mid) / half)));
+          const raw = 1 - Math.abs(amount - mid) / half;
+          const visibility = Math.max(0, Math.min(1, raw * 1.4));
           caption.style.opacity = visibility.toFixed(3);
-          caption.style.filter = 'blur(' + ((1 - visibility) * 9).toFixed(2) + 'px)';
-          caption.style.transform = 'translateY(calc(-50% + ' + ((1 - visibility) * 30).toFixed(1) +
-            'px)) scale(' + (0.968 + visibility * 0.032).toFixed(4) + ')';
-          caption.classList.toggle('is-active', visibility > 0.5);
+          caption.style.filter = visibility < 0.98 ? 'blur(' + ((1 - visibility) * 4).toFixed(1) + 'px)' : 'none';
+          caption.style.transform = 'translateY(calc(-50% + ' + ((1 - visibility) * 22).toFixed(1) +
+            'px)) scale(' + (0.975 + visibility * 0.025).toFixed(4) + ')';
+          caption.classList.toggle('is-active', visibility > 0.4);
         });
       }
 
