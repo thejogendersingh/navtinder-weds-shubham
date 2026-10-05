@@ -1895,11 +1895,12 @@
     }
 
     /* Function card image focal points — ensures main subject/faces are fully visible */
-    .event-card[data-image*="mehandi."] .event-media img { object-position: center 20%; }
-    .event-card[data-image*="haldi."] .event-media img { object-position: center 20%; }
-    .event-card[data-image*="sangeet."] .event-media img { object-position: center 22%; }
-    .event-card[data-image*="sehra-bandi."] .event-media img { object-position: center 18%; }
-    .event-card[data-image*="baraat."] .event-media img { object-position: center 22%; }
+    .event-card[data-image*="mehndi"] .event-media img,
+    .event-card[data-image*="mehandi"] .event-media img { object-position: center 20%; }
+    .event-card[data-image*="haldi"] .event-media img { object-position: center 20%; }
+    .event-card[data-image*="sangeet"] .event-media img { object-position: center 22%; }
+    .event-card[data-image*="the-big-day"] .event-media img,
+    .event-card[data-image*="baraat"] .event-media img { object-position: center 20%; }
     .event-card[data-image$="ganesh-pooja.webp"] .event-media img { object-position: center 20%; }
     .event-card[data-image$="mehendi.webp"] .event-media img { object-position: center 22%; }
     .event-card[data-image$="haldi.webp"] .event-media img { object-position: center 24%; }
@@ -2308,7 +2309,7 @@
           venueArea: "At Residence",
           venueName: "#110/A, Rajdhani Enclave, Sector-126, Kharar, Mohali (Pb.)",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=30%C2%B044%2711.5%22N+76%C2%B040%2706.1%22E",
-          image: "assets/mehandi.webp"
+          image: "assets/mehndi-v2.webp"
         },
         {
           enabled: true,
@@ -2321,7 +2322,7 @@
           venueArea: "At Residence",
           venueName: "#110/A, Rajdhani Enclave, Sector-126, Kharar, Mohali (Pb.)",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=30%C2%B044%2711.5%22N+76%C2%B040%2706.1%22E",
-          image: "assets/haldi.webp"
+          image: "assets/haldi-v2.webp"
         },
         {
           enabled: true,
@@ -2334,24 +2335,11 @@
           venueArea: "Hotel G.K. International",
           venueName: "Sector-35, Chandigarh",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=Hotel%20G.K.%20International%20Sector-35%2C%20Chandigarh",
-          image: "assets/sangeet.webp"
+          image: "assets/sangeet-v2.webp"
         },
         {
           enabled: true,
-          name: "Sehra Bandi",
-          tagline: "auspicious beginnings",
-          details: "Tying the sehra with divine blessings of family and elders.",
-          day: "Friday",
-          date: "13th November, 2026",
-          time: "04:00 PM",
-          venueArea: "At Residence",
-          venueName: "#110/A, Rajdhani Enclave, Sector-126, Kharar, Mohali (Pb.)",
-          mapUrl: "https://www.google.com/maps/search/?api=1&query=30%C2%B044%2711.5%22N+76%C2%B040%2706.1%22E",
-          image: "assets/sehra-bandi.webp"
-        },
-        {
-          enabled: true,
-          name: "Departure of Barat",
+          name: "The Big Day",
           tagline: "the grand celebration",
           details: "Barat departure to Palki Palace.",
           day: "Friday",
@@ -2360,7 +2348,7 @@
           venueArea: "Bugreja’s",
           venueName: "#110/A, Rajdhani Enclave, Kharar, Mohali, (PB.)",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=30%C2%B044%2711.5%22N+76%C2%B040%2706.1%22E",
-          image: "assets/baraat.webp"
+          image: "assets/the-big-day-v2.webp"
         }
       ]
     };
