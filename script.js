@@ -3,16 +3,16 @@
       brideName: "Navtinder Kaur",
       heroMessage: "Invite you to a celebration of colour, laughter and a lifetime of togetherness.",
       hashtag: "#Shubhnav",
-      countdownIso: "2026-11-13T18:00:00+05:30",
-      functionsEyebrow: "Three days of joy & blessings",
+      countdownIso: "2026-11-13T20:00:00+05:30",
+      functionsEyebrow: "Four days of joy & blessings",
 
       /* ---- ENTRY GATE (screen 1) ---- */
       gateLine1: "With the blessings of grandparents",
-      gateLine2: "Smt. Sita Devi & Late Sh. Diwan Chand",
-      gateForever: "Request the pleasure of your gracious presence on the wedding of their beloved son",
+      gateLine2: "Late Bawa Singh & Late Charan Kaur",
+      gateForever: "Request the pleasure of your gracious presence on the wedding of their beloved daughter",
 
       /* ---- WELCOME + PARENTS (screen 2) ---- */
-      welcomeLead: "Request the pleasure of your gracious presence on the wedding of their beloved son",
+      welcomeLead: "Request the pleasure of your gracious presence on the wedding of their beloved daughter",
       brideRelation: "D/O",
       brideParents: "Sdn. Kamlesh Kaur & S. Gurbhag Singh",
       groomRelation: "S/O",
@@ -31,73 +31,98 @@
       venueSchedule: "Celebrations · 11–13 November 2026",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Palki%20Palace%20Chandigarh-Kharar%20Road%2C%20Balongi%2C%20Mohali",
       residenceCoordinates: "30°44'11.5\"N 76°40'06.1\"E",
-      residenceMapUrl: "https://www.google.com/maps/search/?api=1&query=30%C2%B044%2711.5%22N+76%C2%B040%2706.1%22E",
-      rsvpNumber: "+91 8209415303",
-      locationWhatsappMessage: "Hello, I would like the location for Shubham Bugreja and Navtinder Kaur's wedding celebration.",
-      rsvpWhatsappMessage: "Hello InvCraft Media, I want to get this invitation template made for my wedding!",
+      residenceMapUrl: "https://www.google.com/maps/search/?api=1&query=2527+Sector+37C+Chandigarh",
+      rsvpNumber: "+91 9501818005",
+      locationWhatsappMessage: "Hello, I would like the location for Navtinder Kaur and Shubham Bugreja's wedding celebration.",
+      rsvpWhatsappMessage: "Hello, we are delighted to RSVP for Navtinder Kaur & Shubham Bugreja's wedding!",
 
       /* ---- EXACT FUNCTIONS FROM WEDDING INVITATION CARD ---- */
       functions: [
         {
           enabled: true,
-          name: "Mehndi Magic",
+          name: "Haldi Glow",
+          tagline: "glow of love & turmeric",
+          details: "Like haldi, may our bond become brighter and stronger with timeless blessings.",
+          day: "Wednesday",
+          date: "11th November, 2026",
+          time: "03:00 PM",
+          venueArea: "At Residence",
+          venueName: "#2527 Sector 37C Chandigarh",
+          mapUrl: "https://www.google.com/maps/search/?api=1&query=2527+Sector+37C+Chandigarh",
+          image: "assets/haldi1.webp"
+        },
+        {
+          enabled: true,
+          name: "Hands of happiness",
           tagline: "green leaves, red hearts",
           details: "A beautiful evening dipped in love, music and shagan mehndi.",
           day: "Wednesday",
           date: "11th November, 2026",
-          time: "04:00 PM",
+          time: "05:00 PM",
           venueArea: "At Residence",
-          venueName: "#110/A, Rajdhani Enclave, Sector-126, Kharar, Mohali (Pb.)",
-          mapUrl: "https://www.google.com/maps/search/?api=1&query=30%C2%B044%2711.5%22N+76%C2%B040%2706.1%22E",
-          image: "assets/mehndi-v2.webp"
+          venueName: "#2527 Sector 37C Chandigarh",
+          mapUrl: "https://www.google.com/maps/search/?api=1&query=2527+Sector+37C+Chandigarh",
+          image: "assets/mehndi1.webp"
         },
         {
           enabled: true,
-          name: "Rang-e-Haldi",
-          tagline: "sunshine & laughter",
-          details: "Like haldi, may our bond become brighter and stronger with timeless blessings.",
-          day: "Thursday",
-          date: "12th November, 2026",
-          time: "09:00 AM",
-          venueArea: "At Residence",
-          venueName: "#110/A, Rajdhani Enclave, Sector-126, Kharar, Mohali (Pb.)",
-          mapUrl: "https://www.google.com/maps/search/?api=1&query=30%C2%B044%2711.5%22N+76%C2%B040%2706.1%22E",
-          image: "assets/haldi-v2.webp"
-        },
-        {
-          enabled: true,
-          name: "Musical Night",
+          name: "The grand jam",
           tagline: "dance under the stars",
-          details: "Dancing through the sweetest memories and celebrating togetherness.",
+          details: "An evening of traditional Jaago, high spirits, Punjabi beats and endless joy.",
           day: "Thursday",
           date: "12th November, 2026",
-          time: "07:00 PM",
-          venueArea: "Hotel G.K. International",
-          venueName: "Sector-35, Chandigarh",
-          mapUrl: "https://www.google.com/maps/search/?api=1&query=Hotel%20G.K.%20International%20Sector-35%2C%20Chandigarh",
-          image: "assets/sangeet-v2.webp"
+          time: "06:00 PM",
+          venueArea: "Hotel Shanti Nagar",
+          venueName: "Airport Road, TDI, Sector-118, Mohali (Pb.)",
+          mapUrl: "https://www.google.com/maps/search/?api=1&query=Hotel+Shanti+Nagar+Airport+Road+TDI+Sector-118+Mohali",
+          image: "assets/jaago1.webp"
         },
         {
           enabled: true,
-          name: "The Big Day",
+          name: "The Promise",
           tagline: "the grand celebration",
-          details: "Barat departure from Residence to Palki Palace.",
+          details: "Two souls unite in sacred vows and eternal love to begin a lifetime of togetherness.",
           day: "Friday",
           date: "13th November, 2026",
-          time: "06:00 PM",
+          time: "08:00 PM",
           venueArea: "Palki Palace",
           venueName: "Chandigarh-Kharar Road, Balongi, Mohali (Pb.)",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=Palki%20Palace%2C%20Chandigarh-Kharar%20Road%2C%20Balongi%2C%20Mohali",
-          image: "assets/the-big-day-v2.webp"
+          image: "assets/wedding1.webp"
+        }
+      ],
+
+      /* ---- RSVP CONTACTS (GIRL'S SIDE) ---- */
+      rsvpContacts: [
+        {
+          name: "Gurbhag Singh",
+          role: "Family / Host",
+          phone: "95018 18005",
+          phoneRaw: "9501818005",
+          whatsappMsg: "Hello Gurbhag Singh ji, We are delighted to attend Navtinder & Shubham's wedding celebration!"
+        },
+        {
+          name: "Navtinder Kaur",
+          role: "Bride",
+          phone: "88476 43470",
+          phoneRaw: "8847643470",
+          whatsappMsg: "Dear Navtinder, heartiest congratulations on your wedding with Shubham!"
+        },
+        {
+          name: "Kamlesh Kaur",
+          role: "Family / Host",
+          phone: "99148 02527",
+          phoneRaw: "9914802527",
+          whatsappMsg: "Hello Kamlesh Kaur ji, Warm greetings and congratulations on Navtinder's wedding!"
         }
       ]
     };
 
     const EVENT_THEMES = [
-      { background: "#2c1c11", accent: "#f0b45a", image: "assets/images/ganesh-pooja.webp" },
-      { background: "#2f1813", accent: "#f4907b", image: "assets/images/engagement.webp" },
-      { background: "#2b1b10", accent: "#e5a862", image: "assets/images/mayra.webp" },
-      { background: "#102630", accent: "#5cc6ea", image: "assets/images/pool-party.webp" },
+      { background: "#281b0f", accent: "#f5c748", image: "assets/haldi1.webp" },
+      { background: "#162814", accent: "#8be076", image: "assets/mehndi1.webp" },
+      { background: "#271228", accent: "#f089cf", image: "assets/jaago1.webp" },
+      { background: "#2f131a", accent: "#f5a782", image: "assets/wedding1.webp" },
       { background: "#152a11", accent: "#96d47f", image: "assets/images/mehendi.webp" },
       { background: "#2d1526", accent: "#f291c4", image: "assets/images/carnival.webp" },
       { background: "#2e250b", accent: "#f5c748", image: "assets/images/haldi.webp" },
@@ -142,14 +167,14 @@
       };
       const groom = String(CONFIG.groomName || "Groom").trim();
       const bride = String(CONFIG.brideName || "Bride").trim();
-      const names = groom + " weds " + bride;
-      const initials = (groom.charAt(0) + bride.charAt(0)).toUpperCase();
-      const spacedInitials = groom.charAt(0).toUpperCase() + " · " + bride.charAt(0).toUpperCase();
+      const names = bride + " weds " + groom;
+      const initials = (bride.charAt(0) + groom.charAt(0)).toUpperCase();
+      const spacedInitials = bride.charAt(0).toUpperCase() + " · " + groom.charAt(0).toUpperCase();
       const date = inviteDateParts(CONFIG.countdownIso);
 
       setText("gateInitials", spacedInitials);
       const gateTitle = document.getElementById("gateTitle");
-      if (gateTitle) gateTitle.innerHTML = "<span>" + inviteEscape(groom) + "</span><em>weds</em><span>" + inviteEscape(bride) + "</span>";
+      if (gateTitle) gateTitle.innerHTML = "<span>" + inviteEscape(bride) + "</span><em>weds</em><span>" + inviteEscape(groom) + "</span>";
       setText("gateHashtag", CONFIG.hashtag);
       const gateKicker = document.getElementById("gateKicker");
       if (gateKicker) gateKicker.innerHTML = inviteEscape(CONFIG.gateLine1) + "<br>" + inviteEscape(CONFIG.gateLine2);
@@ -186,7 +211,7 @@
       if (filmLines) filmLines.innerHTML = inviteEscape(CONFIG.gateLine1) + "<br>" + inviteEscape(CONFIG.gateLine2);
       setText("filmForever", CONFIG.gateForever);
       const filmNames = document.getElementById("filmNames");
-      if (filmNames) filmNames.innerHTML = "<span>" + inviteEscape(groom) + "</span><em>weds</em><span>" + inviteEscape(bride) + "</span>";
+      if (filmNames) filmNames.innerHTML = "<span>" + inviteEscape(bride) + "</span><em>weds</em><span>" + inviteEscape(groom) + "</span>";
       setText("scratchYear", date.year);
       setText("scratchMonth", date.shortMonth);
       setText("scratchDay", String(Number(date.day) || date.day));
@@ -210,6 +235,31 @@
       const rsvpLink = document.getElementById("rsvpWhatsappLink");
       if (locationLink) locationLink.href = "https://wa.me/" + phone + "?text=" + encodeURIComponent(CONFIG.locationWhatsappMessage || "");
       if (rsvpLink) rsvpLink.href = "https://wa.me/" + phone + "?text=" + encodeURIComponent(CONFIG.rsvpWhatsappMessage || "");
+
+      const rsvpContainer = document.getElementById("rsvpContactsList");
+      if (rsvpContainer && Array.isArray(CONFIG.rsvpContacts)) {
+        rsvpContainer.innerHTML = CONFIG.rsvpContacts.map(contact => {
+          const rawPhone = inviteWhatsappNumber(contact.phoneRaw || contact.phone);
+          const callPhone = String(contact.phoneRaw || contact.phone).replace(/\s+/g, "");
+          const waMsg = contact.whatsappMsg || ("Hello " + contact.name + ", regards for Navtinder & Shubham's wedding!");
+          const waUrl = "https://wa.me/" + rawPhone + "?text=" + encodeURIComponent(waMsg);
+          return '<div class="rsvp-item-card">' +
+            '<div class="rsvp-person-info">' +
+              (contact.role ? '<span class="rsvp-person-relation">' + inviteEscape(contact.role) + '</span>' : '') +
+              '<h4 class="rsvp-person-name">' + inviteEscape(contact.name) + '</h4>' +
+              '<span class="rsvp-person-phone">+91 ' + inviteEscape(contact.phone) + '</span>' +
+            '</div>' +
+            '<div class="rsvp-btn-group">' +
+              '<a href="tel:+91' + inviteEscape(callPhone) + '" class="rsvp-action-btn rsvp-btn-call" title="Call ' + inviteEscape(contact.name) + '" aria-label="Call ' + inviteEscape(contact.name) + '">' +
+                '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+              '</a>' +
+              '<a href="' + waUrl + '" target="_blank" rel="noopener" class="rsvp-action-btn rsvp-btn-wa" title="WhatsApp ' + inviteEscape(contact.name) + '" aria-label="WhatsApp ' + inviteEscape(contact.name) + '">' +
+                '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.4-4.2a8.5 8.5 0 1 1 15.6-4.6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" fill="none"/><path d="M8.2 7.7c.3-.5.6-.5.9-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.5.9 1.2 1.7 2.1 2.2.3.2.5.2.7 0l.8-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.5.3.5.5 0 .3-.1 1.2-.7 1.7-.5.5-1.3.8-2.2.6-1-.2-2.8-.9-4.6-2.5-2.3-2-3-4.3-3.1-5.1 0-.4.1-.6.2-.8Z"/></svg>' +
+              '</a>' +
+            '</div>' +
+          '</div>';
+        }).join("");
+      }
 
       const ribbonValues = [
         (CONFIG.venueAddressLine2 || "") + " · 13 " + date.month + " " + date.year,

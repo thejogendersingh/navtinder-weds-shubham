@@ -1520,22 +1520,78 @@
     }
     .whatsapp-card a:hover { transform: rotate(-8deg) scale(1.08); }
     .whatsapp-card svg { width: 24px; }
+    .rsvp-stack {
+      width: min(340px, 100%);
+      margin: 26px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      scroll-margin-top: 110px;
+    }
     .whatsapp-card.on-dark {
       width: 100%;
-      margin: 26px 0 0;
-      scroll-margin-top: 110px;
+      margin: 0;
       color: white;
-      border-color: rgba(255,255,255,.28);
-      background: rgba(255,255,255,.09);
-      box-shadow: 0 20px 60px rgba(0,0,0,.24);
-      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .09);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .24);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 15px 18px 15px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      text-align: left;
+      box-sizing: border-box;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
     }
-    .whatsapp-card.on-dark small { color: #ffd6a1; }
-    .final-hash {
-      margin: 60px 0 0;
-      color: var(--rose);
-      font-family: var(--font-script);
-      font-size: clamp(36px, 5vw, 58px);
+    .whatsapp-card.on-dark:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, .14);
+      border-color: rgba(255, 214, 161, .55);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .32);
+    }
+    .whatsapp-card.on-dark small {
+      display: block;
+      margin-bottom: 3px;
+      color: #ffd6a1;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-family: var(--font-serif);
+    }
+    .whatsapp-card.on-dark b {
+      display: block;
+      color: #ffffff;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(24px, 5.5vw, 30px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: .02em;
+    }
+    .whatsapp-card.on-dark a {
+      flex: 0 0 auto;
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: white;
+      border-radius: 50%;
+      background: #25d366;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, .32);
+      transition: transform .25s ease, box-shadow .25s ease;
+      text-decoration: none;
+    }
+    .whatsapp-card.on-dark a:hover {
+      transform: scale(1.09) rotate(-6deg);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, .55);
+    }
+    .whatsapp-card.on-dark svg {
+      width: 24px;
+      height: 24px;
     }
     .footer-line {
       width: min(1120px, 100%);
@@ -1863,38 +1919,42 @@
       color: rgba(255,244,236,.94);
     }
     .venue-card .closing-signoff { font-size: clamp(19px, 4.6vw, 25px); }
-    .venue-card .whatsapp-card.on-dark { text-align: center; }
-    .venue-card .whatsapp-card.on-dark small {
-      font-family: var(--font-script);
-      font-size: clamp(17px, 4.4vw, 21px);
-      font-weight: 400;
-      letter-spacing: 0;
-      text-transform: none;
-    }
-    .venue-card .whatsapp-card.on-dark b {
-      font-family: var(--font-script);
-      font-size: clamp(24px, 6vw, 32px);
-      font-weight: 400;
-    }
 
-    /* Function card image focal points — ensures main subject/faces are fully visible */
-    .event-card[data-image*="mehndi"] .event-media img,
-    .event-card[data-image*="mehandi"] .event-media img { object-position: center 20%; }
-    .event-card[data-image*="haldi"] .event-media img { object-position: center 20%; }
+    /* Function card image focal points — ensures main subject/faces/jaago are fully visible */
+    .event-card[data-image*="haldi1"] .event-media img,
+    .event-card[data-image*="haldi"] .event-media img { object-position: center 18%; }
+    .event-card[data-image*="mehndi1"] .event-media img,
+    .event-card[data-image*="mehndi"] .event-media img { object-position: center 22%; }
+    .event-card[data-image*="jaago1"] .event-media img,
+    .event-card[data-image*="jaago"] .event-media img { object-position: center 8%; }
+    .event-card[data-image*="wedding1"] .event-media img,
+    .event-card[data-image*="wedding"] .event-media img { object-position: center 14%; }
     .event-card[data-image*="sangeet"] .event-media img { object-position: center 22%; }
     .event-card[data-image*="the-big-day"] .event-media img,
     .event-card[data-image*="baraat"] .event-media img { object-position: center 20%; }
-    .event-card[data-image$="ganesh-pooja.webp"] .event-media img { object-position: center 20%; }
-    .event-card[data-image$="mehendi.webp"] .event-media img { object-position: center 22%; }
-    .event-card[data-image$="haldi.webp"] .event-media img { object-position: center 24%; }
-    .event-card[data-image$="sangeet.webp"] .event-media img { object-position: center 25%; }
-    .event-card[data-image$="baraat.webp"] .event-media img { object-position: center 28%; }
-    .event-card[data-image$="wedding.webp"] .event-media img { object-position: center 20%; }
-    .event-card[data-image$="engagement.webp"] .event-media img { object-position: center 22%; }
-    .event-card[data-image$="mayra.webp"] .event-media img { object-position: center 25%; }
-    .event-card[data-image$="carnival.webp"] .event-media img { object-position: center 25%; }
-    .event-card[data-image$="pool-party.webp"] .event-media img { object-position: center 25%; }
-    .event-card[data-image$="reception.webp"] .event-media img { object-position: center 22%; }
+
+    /* Text clarity on event cards */
+    .event-copy h3 {
+      color: #ffffff !important;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+    }
+    .event-copy .event-note {
+      color: rgba(255, 244, 238, 0.94) !important;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+    }
+    .event-when b {
+      color: var(--accent, #ffd6a1) !important;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+    }
+    .event-where-text b {
+      color: #ffffff !important;
+    }
+    .event-where-text span {
+      color: var(--accent, #ffd6a1) !important;
+    }
+    .event-media::after {
+      background: linear-gradient(180deg, transparent 48%, rgba(0,0,0,0.2) 68%, var(--slide-bg, #1a1012) 100%) !important;
+    }
     .scratch-reveal small { color: #ffc2d1; }
     .scratch-reset {
       color: #2a1512;
