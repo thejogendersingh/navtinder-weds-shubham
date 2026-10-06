@@ -49,7 +49,7 @@
           venueArea: "At Residence",
           venueName: "#2527 Sector 37C Chandigarh",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=2527+Sector+37C+Chandigarh",
-          image: "assets/haldi1.webp"
+          image: "assets/box1.webp"
         },
         {
           enabled: true,
@@ -62,7 +62,7 @@
           venueArea: "At Residence",
           venueName: "#2527 Sector 37C Chandigarh",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=2527+Sector+37C+Chandigarh",
-          image: "assets/mehndi1.webp"
+          image: "assets/box2.webp"
         },
         {
           enabled: true,
@@ -75,7 +75,7 @@
           venueArea: "Hotel Shanti Nagar",
           venueName: "Airport Road, TDI, Sector-118, Mohali (Pb.)",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=Hotel+Shanti+Nagar+Airport+Road+TDI+Sector-118+Mohali",
-          image: "assets/jaago1.webp"
+          image: "assets/box3.webp"
         },
         {
           enabled: true,
@@ -88,7 +88,7 @@
           venueArea: "Palki Palace",
           venueName: "Chandigarh-Kharar Road, Balongi, Mohali (Pb.)",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=Palki%20Palace%2C%20Chandigarh-Kharar%20Road%2C%20Balongi%2C%20Mohali",
-          image: "assets/wedding1.webp"
+          image: "assets/box4.webp"
         }
       ],
 
@@ -119,10 +119,10 @@
     };
 
     const EVENT_THEMES = [
-      { background: "#281b0f", accent: "#f5c748", image: "assets/haldi1.webp" },
-      { background: "#162814", accent: "#8be076", image: "assets/mehndi1.webp" },
-      { background: "#271228", accent: "#f089cf", image: "assets/jaago1.webp" },
-      { background: "#2f131a", accent: "#f5a782", image: "assets/wedding1.webp" },
+      { background: "#281b0f", accent: "#f5c748", image: "assets/box1.webp" },
+      { background: "#162814", accent: "#8be076", image: "assets/box2.webp" },
+      { background: "#271228", accent: "#f089cf", image: "assets/box3.webp" },
+      { background: "#2f131a", accent: "#f5a782", image: "assets/box4.webp" },
       { background: "#152a11", accent: "#96d47f", image: "assets/images/mehendi.webp" },
       { background: "#2d1526", accent: "#f291c4", image: "assets/images/carnival.webp" },
       { background: "#2e250b", accent: "#f5c748", image: "assets/images/haldi.webp" },

@@ -1921,14 +1921,18 @@
     .venue-card .closing-signoff { font-size: clamp(19px, 4.6vw, 25px); }
 
     /* Function card image focal points — ensures main subject/faces/jaago are fully visible */
+    .event-card[data-image*="box1"] .event-media img,
     .event-card[data-image*="haldi1"] .event-media img,
-    .event-card[data-image*="haldi"] .event-media img { object-position: center 18%; }
+    .event-card[data-image*="haldi"] .event-media img { object-position: center 20%; }
+    .event-card[data-image*="box2"] .event-media img,
     .event-card[data-image*="mehndi1"] .event-media img,
-    .event-card[data-image*="mehndi"] .event-media img { object-position: center 22%; }
+    .event-card[data-image*="mehndi"] .event-media img { object-position: center 24%; }
+    .event-card[data-image*="box3"] .event-media img,
     .event-card[data-image*="jaago1"] .event-media img,
     .event-card[data-image*="jaago"] .event-media img { object-position: center 8%; }
+    .event-card[data-image*="box4"] .event-media img,
     .event-card[data-image*="wedding1"] .event-media img,
-    .event-card[data-image*="wedding"] .event-media img { object-position: center 14%; }
+    .event-card[data-image*="wedding"] .event-media img { object-position: center 15%; }
     .event-card[data-image*="sangeet"] .event-media img { object-position: center 22%; }
     .event-card[data-image*="the-big-day"] .event-media img,
     .event-card[data-image*="baraat"] .event-media img { object-position: center 20%; }
