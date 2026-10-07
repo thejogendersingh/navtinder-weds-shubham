@@ -8,7 +8,7 @@
 
       /* ---- ENTRY GATE (screen 1) ---- */
       gateLine1: "With the blessings of grandparents",
-      gateLine2: "Late Bawa Singh & Late Charan Kaur",
+      gateLine2: "Late Sdn. Charan Kaur & Late S. Bawa Singh",
       gateForever: "Request the pleasure of your gracious presence on the wedding of their beloved daughter",
 
       /* ---- WELCOME + PARENTS (screen 2) ---- */
@@ -53,7 +53,7 @@
         },
         {
           enabled: true,
-          name: "Hands of happiness",
+          name: "Hands Of Happiness",
           tagline: "green leaves, red hearts",
           details: "A beautiful evening dipped in love, music and shagan mehndi.",
           day: "Wednesday",
@@ -66,7 +66,7 @@
         },
         {
           enabled: true,
-          name: "The grand jam",
+          name: "The Grand Jam",
           tagline: "dance under the stars",
           details: "An evening of traditional Jaago, high spirits, Punjabi beats and endless joy.",
           day: "Thursday",
